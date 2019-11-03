@@ -6,6 +6,7 @@ const server = http.createServer((req, res) => {
   res.end('I am server');
 });
 
+const PORT = 5000;
 server.listen(5000, () => {
-  console.log('listen on port 8000');
+  console.log(`Listen on port ${PORT}`);
 });
