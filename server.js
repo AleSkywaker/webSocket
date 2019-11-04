@@ -1,7 +1,5 @@
 const http = require('http');
-
 const webSocket = require('ws');
-
 const server = http.createServer((req, res) => {
   res.end('I am server');
 });
