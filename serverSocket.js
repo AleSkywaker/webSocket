@@ -10,8 +10,8 @@ const io = socketio(server);
 
 io.on('connection', (socket, req) => {
   // ws.send became socket.emit
-  socket.emit('welcome to websocket server!!! 👻');
-  socket.on('kaka', msg => {
+  socket.emit('bienvenido', 'welcome to websocket server!!! 👻');
+  socket.on('messageCustom', msg => {
     console.log(msg);
   });
 });
