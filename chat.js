@@ -10,7 +10,7 @@ const expressServer = app.listen(6500, () => {
 });
 
 const io = socketio(expressServer);
-// we can use either connection or connect
+// we can use connection or connect
 io.on('connect', socket => {
   socket.emit('mensajeDesdeServidor', { datos: 'datos desde el server 🦄' });
   socket.on('datosAlServidor', datosDelCliente => {
