@@ -7,7 +7,7 @@ app.use(express.static(__dirname + '/public'));
 
 let port = 6500;
 const expressServer = app.listen(port, () => {
-  console.log('escuchando');
+  console.log('escuchando en puerto ${port}');
 });
 
 const io = socketio(expressServer);
