@@ -10,7 +10,7 @@ const expressServer = app.listen(6500, () => {
 });
 
 const io = socketio(expressServer);
-io.on('connection', socket => {
+io.on('connect', socket => {
   socket.emit('mensajeDesdeServidor', { datos: 'datos desde el server 🦄' });
   socket.on('datosAlServidor', datosDelCliente => {
     console.log(datosDelCliente);
