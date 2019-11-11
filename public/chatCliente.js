@@ -11,4 +11,5 @@ socket.on('ping', () => {
 
 socket.on('pong', latency => {
   console.log(latency);
+  console.log('Pong was send to server');
 });
