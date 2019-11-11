@@ -5,10 +5,10 @@ socket.on('mensajeDesdeServidor', datosDesdeServidor => {
   socket.emit('datosAlServidor', { datosToServer: 'Se acaba de conectar un nuevo cliente' });
 });
 
-// socket.on('ping', () => {
-//   console.log('Ping was received from server');
-// });
+socket.on('ping', () => {
+  console.log('Ping was received from server');
+});
 
-socket.on('pong', function(d) {
-  console.log(d);
+socket.on('pong', latency => {
+  console.log(latency);
 });
