@@ -8,3 +8,7 @@ socket.on('mensajeDesdeServidor', datosDesdeServidor => {
 socket.on('ping', () => {
   console.log('Ping was received from server');
 });
+
+socket.on('pong', latency => {
+  console.log(latency);
+});
