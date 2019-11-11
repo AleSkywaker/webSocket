@@ -4,3 +4,7 @@ socket.on('mensajeDesdeServidor', datosDesdeServidor => {
   document.write(datosDesdeServidor.datos);
   socket.emit('datosAlServidor', { datosToServer: 'Se acaba de conectar un nuevo cliente' });
 });
+
+socket.on('ping', () => {
+  console.log('Ping was received from server');
+});
