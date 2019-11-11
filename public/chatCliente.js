@@ -11,6 +11,7 @@ socket.on('ping', () => {
 
 socket.on('pong', latency => {
   console.log(latency);
+  console.log('pong to server');
 });
 socket.on('connect', () => {
   console.log(socket.id);
