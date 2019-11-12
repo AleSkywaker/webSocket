@@ -16,6 +16,3 @@ socket.on('pong', latency => {
 socket.on('connect', () => {
   console.log(socket.id);
 });
-socket.on('disconnect', () => {
-  console.log('cliente se ha ido');
-});
